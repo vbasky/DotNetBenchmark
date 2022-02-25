@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DotNetBenchmark.StringBenchmark-20220225-141839</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=macOS Monterey 12.2.1 (21D62) [Darwin 21.3.0]
+Intel Core i9-9880H CPU 2.30GHz, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=6.0.200
+  [Host]     : .NET 6.0.2 (6.0.222.6406), X64 RyuJIT
+  DefaultJob : .NET 6.0.2 (6.0.222.6406), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                   Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>ConcatStringsUsingStringBuilder</td><td>5.544 ms</td><td>0.1023 ms</td><td>0.0957 ms</td><td>1</td><td>2250.0000</td><td>1500.0000</td><td>968.7500</td><td>15 MB</td>
+</tr><tr><td>ConcatStringsUsingGenericList</td><td>16.775 ms</td><td>0.3340 ms</td><td>0.8319 ms</td><td>2</td><td>1187.5000</td><td>562.5000</td><td>250.0000</td><td>9 MB</td>
+</tr></tbody></table>
+</body>
+</html>
